@@ -23,6 +23,7 @@ body{
 a{
     text-decoration: none;
     color: red;
+    font-weight: bold;
 }
 
 .form-container{
@@ -39,10 +40,9 @@ form{
     flex-direction: column;
 }
 
-h3{
-    text-align: center;
+h1{
     margin-bottom: 1rem;
-    border-bottom: 2px solid black;
+    text-align: center;
 }
 
 .form-fields{
@@ -51,10 +51,9 @@ h3{
     column-gap: 1rem;
 }
 
-.user-detail,
-.user-personal,
-.user-address {
-    padding:1rem 0 1rem 0;
+.sections {
+    padding:1.5rem 0 1.5rem 0;
+    border-bottom: 1px solid black;
 
 }
 
@@ -79,6 +78,7 @@ textarea {
 }
 
 .form-action button {
+    margin-top: 1rem;
     width: 4rem;
     padding: 10px 15px;
     background-color: #4caf50;

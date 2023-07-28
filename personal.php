@@ -1,9 +1,9 @@
 <?php require './includes/header.inc.php' ?>
 
 <div class="form-container">
+    <h1>Personal Details</h1>
     <form action="">
-        <div class="user-detail">
-            <h3>Student Details</h3>
+        <div class="sections">
             <div class="form-fields">
                 <label for="name">Name</label>
                 <input type="text">
@@ -14,8 +14,7 @@
             </div>
         </div>
 
-        <div class="user-personal">
-            <h3>Personal Details</h3>
+        <div class="sections">
             <div class="form-fields">
                 <label for="fname">Father's Name</label>
                 <input type="text">
@@ -43,8 +42,7 @@
             </div>
         </div>
 
-        <div class="user-address">
-            <h3>Address Details</h3>
+        <div class="sections">
             <div class="form-fields">
                 <label for="add">Permanent Address</label>
                 <textarea ></textarea>
