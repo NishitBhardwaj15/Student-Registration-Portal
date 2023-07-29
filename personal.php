@@ -1,68 +1,43 @@
-<?php require './includes/header.inc.php' ?>
+<?php 
+require './controller/personal.controller.php';
+?>
 
-<div class="form-container">
-    <h1>Personal Details</h1>
-    <form action="">
-        <div class="sections">
-            <div class="form-fields">
-                <label for="name">Name</label>
-                <input type="text">
-                <label for="contact">Contact Number</label>
-                <input type="text">
-                <label for="sem">Semester</label>
-                <input type="text" placeholder="1" disabled>
-            </div>
-        </div>
+<?php 
+if(isset($_POST['submit_personal'])){
+    $name = $_POST['name'];
+    $contact = $_POST['contact'];
+    $father = $_POST['father'];
+    $mother = $_POST['mother'];
+    $dob = $_POST['dob'];
+    $gender = $_POST['gender'];
+    $religion = $_POST['religion'];
+    $caste = $_POST['caste'];
+    $category = $_POST['category'];
+    $address = $_POST['address'];
+    $tmp = $_POST['tmp'];
+    $state = $_POST['state'];
+    $district = $_POST['district'];
+    $pin = $_POST['pin'];
+    $gcontact = $_POST['gcontact'];
 
-        <div class="sections">
-            <div class="form-fields">
-                <label for="fname">Father's Name</label>
-                <input type="text">
-                <label for="mname">Mother's Name</label>
-                <input type="text">
-                <label for="dob">Date of Birth</label>
-                <input type="date">
-                <label for="gender">Gender</label>
-                <select name="gen">
-                    <option value="Male">Male</option>
-                    <option value="Female">Female</option>
-                    <option value="Other">Other</option>
-                </select>
-                <label for="rel">Religion</label>
-                <input type="text">
-                <label for="caste">Caste</label>
-                <input type="text">
-                <label for="cat">Category</label>
-                <select name="cat">
-                    <option value="General">General</option>
-                    <option value="OBC">OBC</option>
-                    <option value="ST">ST</option>
-                    <option value="SC">SC</option>
-                </select>
-            </div>
-        </div>
+    $personal = new PersonalController();
+    $personal->personalData($name,$contact,$father,$mother,$dob,$gender,$religion,$caste,$category,$address,$tmp,$state,$district,$pin,$gcontact);
+}
+?>
 
-        <div class="sections">
-            <div class="form-fields">
-                <label for="add">Permanent Address</label>
-                <textarea ></textarea>
-                <label for="tadd">Temporary Address</label>
-                <textarea ></textarea>
-                <label for="state">State</label>
-                <input type="text">
-                <label for="dis">District</label>
-                <input type="text">
-                <label for="pin">Pincode</label>
-                <input type="number">
-                <label for="altphone">Guardian's Contact Number</label>
-                <input type="number">
-            </div>
-        </div>
 
-        <div class="form-action">
-            <button type="submit">Save</button>
-        </div>
-    </form>
-</div>
+<?php
+if($_SESSION['step'] == 1){
+   
+    require './includes/header.inc.php';
 
-<?php require './includes/footer.inc.php' ?>
+    require './includes/personal.inc.php';
+
+    require './includes/footer.inc.php';
+}
+if($_SESSION['step'] == 2){
+    require './includes/header.inc.php';
+    
+    require './includes/progress.inc.php';
+}
+?>

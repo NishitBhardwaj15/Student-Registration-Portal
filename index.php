@@ -1,13 +1,21 @@
+<?php require './controller/user.controller.php' ?>
+
 <?php
 if (isset($_POST["submit_log"])) {
     $password = $_POST["password_l"];
     $email = $_POST["email_l"];
+
+    $user = new UserController();
+    $user->loginData($email,$password);
 }
 
 if (isset($_POST["submit_reg"])) {
     $password = $_POST["password_r"];
     $email = $_POST["email_r"];
     $cpassword = $_POST['cpassword_r'];
+
+    $user = new UserController();
+    $user->registerData($email,$password,$cpassword);
 }
 ?>
 

@@ -14,9 +14,15 @@
 <body>
     <div class="navbar">
         <div class="navbar-brand">
-            Student Admission Portal
+            XYZ College
+        </div>
+        <div class="navbar-options">
+            <a href="http://localhost/student-registration-portal/personal.php">Personal Information</a>
+            <a href="http://localhost/student-registration-portal/education.php">Educational Information</a>
+            <a href="http://localhost/student-registration-portal/major.php">Programme Information</a>
+            <a href="http://localhost/student-registration-portal/documents.php">Upload Documents</a>
         </div>
         <div class="navbar-action">
-            <a href="http://localhost/student-registration-portal/logout">Logout</a>
+            <a href="http://localhost/student-registration-portal/logout.php">Logout</a>
         </div>
     </div>
