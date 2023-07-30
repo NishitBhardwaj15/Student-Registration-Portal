@@ -12,20 +12,52 @@ body{
 .navbar{
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 1.5rem;
-    font-weight: bold;
-    font-size: 1.5rem;
     background-color: #fff;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
     border-bottom: 1px solid black;
 }
 
-a{
-    text-decoration: none;
-    color: red;
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
     font-weight: bold;
 }
 
+.fa-sharp {
+    font-size: 24px;
+    margin-right: 0.5rem;
+}
+
+.nav-links {
+    color: black;
+    text-decoration: none;
+    margin-right: 20px;
+    transition: 0.3s ease;
+}
+
+.nav-links:hover {
+    color: #4caf50;
+}
+
+.nav-links.active {
+    border-bottom: 3px solid #4caf50;; 
+}
+
+
+.navbar-action a {
+    color: red;
+    text-decoration: none;
+    transition: 0.3s ease;
+    font-weight: bold;
+  }
+  
+.navbar-action a:hover {
+    color: #ff8888;
+}
+  
 .form-container{
     padding: 3rem 1rem 3rem 1rem;
 }
@@ -101,10 +133,11 @@ textarea {
 }
 
 .progress-container{
-    width: 300px;
+    width: 400px;
     margin: 2rem auto;
     border: 2px solid black;
     font-size: 1.2rem;
+    text-align: center;
     padding: 1.2rem;
     border-radius: 5px;
     color: #fff;

@@ -28,7 +28,7 @@ if($_SESSION['step'] == 3){
 
     require './includes/footer.inc.php';
 }
-if($_SESSION['step'] == 4){
+if($_SESSION['step'] > 3){
     require './includes/header.inc.php';
     
     require './includes/progress.inc.php';
