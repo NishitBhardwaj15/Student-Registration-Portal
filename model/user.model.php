@@ -2,12 +2,6 @@
 
 session_start();
 
-$_SESSION['login'] = false;
-
-if($_SESSION['login'] == false){
-    header('Location:http://localhost/student-registration-portal/personal.php');
-}
-
 require './db/db.php';
 
 class UserModel extends Db
@@ -91,7 +85,6 @@ class UserModel extends Db
                         $_SESSION['email'] = $email;
                         $_SESSION['step'] = $step;
                         $_SESSION['id'] = $id;
-                        $_SESSION['login'] = true;
 
                         echo '<script>window.location.href = "http://localhost/student-registration-portal/personal.php";</script>';
                     }
@@ -110,7 +103,6 @@ class UserModel extends Db
                     $_SESSION['email'] = $email;
                     $_SESSION['step'] = $step;
                     $_SESSION['id'] = $id;
-                    $_SESSION['login'] = true;
 
                     echo '<script>window.location.href = "http://localhost/student-registration-portal/personal.php";</script>';
                 }

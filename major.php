@@ -1,46 +1,36 @@
-<?php require './includes/header.inc.php' ?>
+<?php require './controller/major.controller.php' ?>
 
-<div class="form-container">
-    <h1>Programme Details</h1>
-    <form action="">
-        <div class="sections">
-            <div class="form-fields">
-                <label for="course">Course</label>
-                <input type="text" placeholder="B.SC" disabled>
-                <label for="sem">Semester</label>
-                <input type="text" placeholder="1" disabled>
-                <label for="major">Major</label>
-                <select name="major">
-                    <option value="Physics">Physics</option>
-                    <option value="Chemistry">Chemistry</option>
-                    <option value="Mathematics">Mathematics</option>
-                    <option value="Botany">Botany</option>
-                    <option value="Zoology">Zoology</option>
-                </select>
-            </div>
-        </div>
+<?php
+$major = new MajorController();
+$stream = $major->streamData();
 
-        <div class="sections">
-            <div class="form-fields">
-                <label for="maj1">Major Paper 1</label>
-                <input type="text">
-                <label for="maj2">Major Paper 2</label>
-                <input type="text">
-                <label for="ele1">Elective Paper 1</label>
-                <input type="text">
-                <label for="ele2">Elective Paper 2</label>
-                <input type="text">
-                <label for="lab">Laboratory Paper 1</label>
-                <input type="text">
-                <label for="cred">Total marks credits</label>
-                <input type="text" placeholder="100" disabled>
-            </div>
-        </div>
+require './includes/stream.inc.php';
 
-        <div class="form-action">
-            <button type="submit">Save</button>
-        </div>
-    </form>
-</div>
+if (isset($_POST['submit_maj'])) {
+    $major = $_POST['major'];
+    $paperm1 = $_POST['paperm1'];
+    $paperm2 = $_POST['paperm2'];
+    $papere1 = $_POST['papere1'];
+    $papere2 = $_POST['papere2'];
+    $paperl = $_POST['paperl'];
 
-<?php require './includes/footer.inc.php' ?>
+    $programme = new MajorController();
+    $programme->majorData($course,$major,$paperm1,$paperm2,$papere1,$papere2,$paperl);
+}
+?>
+
+<?php 
+if($_SESSION['step'] == 3){
+   
+    require './includes/header.inc.php';
+
+    require './includes/major.inc.php';
+
+    require './includes/footer.inc.php';
+}
+if($_SESSION['step'] == 4){
+    require './includes/header.inc.php';
+    
+    require './includes/progress.inc.php';
+}
+?>
