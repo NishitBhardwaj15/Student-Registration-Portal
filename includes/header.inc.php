@@ -22,7 +22,7 @@ function isCurrentPage($pageName)
 </head>
 
 <body>
-    <div class="navbar">
+    <div class="navbar" id="nav">
         <div class="navbar-brand">
             <i class="fa-sharp fa-solid fa-building-columns"></i>
             XYZ College

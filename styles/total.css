@@ -62,7 +62,8 @@ body{
     padding: 3rem 1rem 3rem 1rem;
 }
 
-form{
+form,
+.form{
     background-color: #fff;
     border: 2px solid black;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
@@ -81,6 +82,7 @@ h1{
     display: grid;
     grid-template-columns: repeat(6,1fr);
     column-gap: 1rem;
+    row-gap: 1rem;
 }
 
 .sections {
@@ -143,4 +145,25 @@ textarea {
     color: #fff;
     background:#45a049;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+img {
+    width: 200px;
+}
+
+@page {margin-right: auto; margin-left: auto;}
+
+@media print {
+    #nav{
+        display: none !important;
+    }
+
+    #foot{
+        display: none !important;
+    }
+    
+    #print{
+        display: none !important;
+    }
+
 }

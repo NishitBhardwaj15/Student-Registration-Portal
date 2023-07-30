@@ -1,12 +1,17 @@
 <?php 
+session_start();
+
+if(!$_SESSION['email']){
+    header('Location:http://localhost/student-registration-portal/');
+}
 
 require './db/db.php';
 
 class FinalModel extends Db{
-    protected function final(){
-        $getUserQuery = "Select Name,Mail,Phone from userdetail where Mail=?";
-        $stmt = $this->dbconnect()->prepare($getUserQuery);
-        $stmt->bindParam(1,$mail);
+    protected function first(){
+        $getFirstQuery = "Select name,contact,semester,father,mother,dob,gender,religion,caste,category,address,state,district from personal where user_id=?";
+        $stmt = $this->dbconnect()->prepare($getFirstQuery);
+        $stmt->bindParam(1,$_SESSION['id']);
         $stmt->execute();
         $result = $stmt->fetch();
 
@@ -14,13 +19,13 @@ class FinalModel extends Db{
             return $result;
         }
         else{
-            echo '<script>alert("Something went wrong")</script>';
+            echo '<script>alert("Something went wrong 1")</script>';
         }
     }
-    protected function getPersonal($mail){
-        $getPersonalQuery = "Select Father,Mother,Dob,Religion,Category,School,Board,Year,Total,Percentage from personalinfo where Mail=?";
-        $stmt = $this->dbconnect()->prepare($getPersonalQuery);
-        $stmt->bindParam(1,$mail);
+    protected function second(){
+        $getSecondQuery = "Select school,passing,stream,board,total,percent from academic where user_id=?";
+        $stmt = $this->dbconnect()->prepare($getSecondQuery);
+        $stmt->bindParam(1,$_SESSION['id']);
         $stmt->execute();
         $result = $stmt->fetch();
 
@@ -28,13 +33,13 @@ class FinalModel extends Db{
             return $result;
         }
         else{
-            echo '<script>alert("Something went wrong")</script>';
+            echo '<script>alert("Something went wrong 2")</script>';
         }
     }
-    protected function getElective($mail){
-        $getElectiveQuery = "Select Stream,Elective1,Elective2 from elective where Mail=?";
-        $stmt = $this->dbconnect()->prepare($getElectiveQuery);
-        $stmt->bindParam(1,$mail);
+    protected function third(){
+        $getThirdQuery = "Select course,major,paper1,paper2,elec1,elec2,lab1 from programme where user_id=?";
+        $stmt = $this->dbconnect()->prepare($getThirdQuery);
+        $stmt->bindParam(1,$_SESSION['id']);
         $stmt->execute();
         $result = $stmt->fetch();
 
@@ -42,13 +47,13 @@ class FinalModel extends Db{
             return $result;
         }
         else{
-            echo '<script>alert("Something went wrong")</script>';
+            echo '<script>alert("Something went wrong 3")</script>';
         }
     }
-    protected function getAddress($mail){
-        $getElectiveQuery = "Select Address,State,District,Pincode,Gcontact from addressinfo where Mail=?";
-        $stmt = $this->dbconnect()->prepare($getElectiveQuery);
-        $stmt->bindParam(1,$mail);
+    protected function fourth(){
+        $getFourthQuery = "Select photo_src,marks_src,identity_src from documents where user_id=?";
+        $stmt = $this->dbconnect()->prepare($getFourthQuery);
+        $stmt->bindParam(1,$_SESSION['id']);
         $stmt->execute();
         $result = $stmt->fetch();
 
@@ -56,7 +61,7 @@ class FinalModel extends Db{
             return $result;
         }
         else{
-            echo '<script>alert("Something went wrong")</script>';
+            echo '<script>alert("Something went wrong 4")</script>';
         }
     }
 }
