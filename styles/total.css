@@ -167,3 +167,38 @@ img {
     }
 
 }
+
+.styled-table {
+    border-collapse: collapse;
+    margin: 2rem auto 0 auto;
+    font-size: 0.9rem;
+    min-width: 50rem;
+    border: 2px solid black;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.styled-table thead tr {
+    background-color: #009879;
+    color: #fff;
+    text-align: center;
+}
+
+.styled-table th,
+.styled-table td {
+    padding: 12px 15px;
+    border-right: 2px solid black;
+}
+
+.styled-table tbody tr {
+    background-color: #fff;
+    color: black;
+    text-align: center;
+    border-bottom: 1px solid black;
+}
+
+
+.dashboard-img{
+    width: 100px;
+}
+
+  
