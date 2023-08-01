@@ -23,7 +23,6 @@ function isCurrentPage($pageName)
 <body>
     <div class="navbar" id="nav">
         <div class="navbar-brand">
-            <i class="fa-sharp fa-solid fa-building-columns"></i>
             XYZ College
         </div>
         <div class="navbar-options">
@@ -35,6 +34,6 @@ function isCurrentPage($pageName)
         </div>
         
         <div class="navbar-action">
-            <a href="http://localhost/student-registration-portal/logout.php">Logout <i class="fa-solid fa-right-from-bracket"></i></a>
+            <a href="http://localhost/student-registration-portal/logout.php">Logout</a>
         </div>
     </div>
