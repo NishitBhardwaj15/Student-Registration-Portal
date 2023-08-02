@@ -21,6 +21,6 @@
         </div>
         
         <div class="navbar-action">
-            <a href="http://localhost/student-registration-portal/logout.php">Logout</a>
+            <a href="http://localhost/student-registration-portal/admin/logout.php">Logout</a>
         </div>
     </div>

@@ -77,8 +77,10 @@ h3{
 }
 
 .footer {
+    text-align: center;
+    font-size: 1.2rem;
+    color: whitesmoke;
+    background-color: black;
     padding: 2rem;
-    border-top: 2px solid black;
-    background-color: #fff;
-    font-weight: bolder;
+    font-weight: bold;
 }

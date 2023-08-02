@@ -1,5 +1,5 @@
 <div class="footer" id="foot">
-        this is the footer
+        <p>2023 - XYZ College</p>
     </div>
 
 </body>

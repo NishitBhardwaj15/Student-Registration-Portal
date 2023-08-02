@@ -128,10 +128,12 @@ textarea {
 }
 
 .footer {
+    text-align: center;
+    font-size: 1.2rem;
+    color: whitesmoke;
+    background-color: black;
     padding: 2rem;
-    border-top: 2px solid black;
-    background-color: #fff;
-    font-weight: bolder;
+    font-weight: bold;
 }
 
 .progress-container{
@@ -172,7 +174,7 @@ img {
     border-collapse: collapse;
     margin: 2rem auto 0 auto;
     font-size: 0.9rem;
-    min-width: 50rem;
+    min-width: 60rem;
     border: 2px solid black;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
 }
@@ -201,4 +203,20 @@ img {
     width: 100px;
 }
 
+tbody a{
+    color: blue;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+tbody button{
+    width: 4rem;
+    padding: 10px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+}
   

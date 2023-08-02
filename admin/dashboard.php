@@ -39,12 +39,12 @@ $result = $dashboard->dashboardData();
                 elseif($key == 'marks_src'){
                     ?>
                         <td>
-                           <a href="../<?php echo $value?>" download>Download</a>
+                           <a href="../<?php echo $value?>" view>View</a>
                         </td>
                     <?php
                 }
             }
-            echo "<td><button class='accept'>Accept</button></td>";
+            echo "<td><button>Accept</button></td>";
             echo "</tr>";
         }
         ?>
