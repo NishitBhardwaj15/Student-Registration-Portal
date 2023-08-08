@@ -1,6 +1,6 @@
 <?php 
 
-session_start();
+require './config/config.php';
 
 if(!$_SESSION['email']){
     header('Location:http://localhost/student-registration-portal/');
@@ -63,4 +63,3 @@ class MajorModel extends Db{
         return $stream;
     }
 }
-?>

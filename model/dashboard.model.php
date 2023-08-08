@@ -1,5 +1,6 @@
 <?php
-session_start();
+
+require '../config/config.php';
 
 if(!$_SESSION['admin']){
     header('Location:http://localhost/student-registration-portal/admin/login.php');
