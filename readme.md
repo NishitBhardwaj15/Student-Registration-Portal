@@ -7,7 +7,7 @@ Welcome to the Student Registration Portal project! This project is built using 
 
 - User Authentication and Session Management - Student and admin passwords are hashed before storage to ensure data security. Sessions are used to manage user authentication and track user interactions throughout the application.
 
-- Student Listing and Details - Display a list of registered students with basic with their details for admin.
+- Student Listing and Details - Display a list of registered students with their details for admin usage.
 
 - MVC Architecture: The project is structured using the Model-View-Controller (MVC) design pattern.
 
