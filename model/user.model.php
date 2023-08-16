@@ -2,6 +2,8 @@
 
 require './config/config.php';
 
+
+
 require './db/db.php';
 
 class UserModel extends Db
